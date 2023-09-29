@@ -16,9 +16,10 @@ function getWeather(cityName) {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
-      const temperature = data.main.temp;
+      const temperatureKelvin = data.main.temp;
+      const temperatureCelsius = (temperatureKelvin - 273.15).toFixed(2);
       const description = data.weather[0].description;
-      const weatherHtml = `<p>Temperature: ${temperature}°C</p><p>Description: ${description}</p>`;
+      const weatherHtml = `<p>Temperature: ${temperatureCelsius}°C</p><p>Description: ${description}</p>`;
       weatherInfo.innerHTML = weatherHtml;
     })
     .catch((error) => {
