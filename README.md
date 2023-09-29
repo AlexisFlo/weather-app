@@ -27,3 +27,7 @@ To use the app, simply open the `public/index.html` file in your web browser. En
 ## Dependencies
 
 This project has no external dependencies.
+
+## Live demo
+
+https://weather-app-nine-liard.vercel.app/
